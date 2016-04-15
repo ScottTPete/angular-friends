@@ -32,14 +32,14 @@
 
         <select class="input-medium" ng-model="sortBy">
           <option value="+">Descending</option>
-          <option value="">Ascending</option>
+          <option value="-">Ascending</option>
         </select>
 
       </div>
     </form>
 
     <ul>
-      <li class='friend' ng-repeat="friend in friends | filter: searchTerm | orderBy: searchAttribute: sortBy">
+      <li class='friend' ng-repeat="friend in friends | filter: searchTerm | orderBy: searchAttribute: checkSort()">
         <img class="profile-pic" src='{{friend.pic_square}}'>
 
         <h3>{{friend.name}}</h3>
@@ -61,7 +61,7 @@
 
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
   <script src="app.js"></script>
   <script src="FriendController.js"></script>
 </body>

@@ -2,7 +2,15 @@ app.controller('FriendController', function($scope){
 	
 	$scope.searchAttribute = 'name';
 	
-	$scope.sortBy = "+";
+//	$scope.sortBy = "+";
+	
+	$scope.checkSort = function() {
+		if($scope.sortBy === "+") {
+			return true;
+		} else {
+			return false;
+		}
+	}
 	
 	$scope.friends = [
   {
